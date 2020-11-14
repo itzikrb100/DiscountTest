@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sap">1dp</dimen>
+    <dimen name="size_pic">80dp</dimen>
+    <dimen name="space">5dp</dimen>
+    <dimen name="container_size">150dp</dimen>
+</resources>

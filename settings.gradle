@@ -1,0 +1,2 @@
+include ':app', ':business-logic-layer', ':ui-layer', ':commons'
+rootProject.name='TestBankDiscount'

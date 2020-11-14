@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.3.61'
+    ext.kotlinCoroutinVersion = '1.3.3'
+    ext.roomVersion = "2.1.0"//"1.1.1"
+    ext.lifecycleVersion = "1.1.1"
+    ext.recycleVersion = "1.1.0-beta04"
+    ext.swiperefreshlayoutVersion = "1.1.0"
+    ext.okhttpVersion = "3.10.0"
+    ext.gsonVersion = "2.8.6"
+    ext.coreKotlinVersion = "1.2.0"
+    ext.glideVersion = "4.10.0"
+    ext.constrainlayoutVersion = "1.1.3"
+    ext.minSdk = 15
+    ext.targetSdk = 29
+
+    ext.libs = [
+            okkhttp     : "com.squareup.okhttp3:okhttp:$okhttpVersion",
+            lifecycle   : "android.arch.lifecycle:extensions:$lifecycleVersion",
+            glide       : "com.github.bumptech.glide:glide:$glideVersion",
+            swiperefresh: "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayoutVersion",
+            json        : "com.google.code.gson:gson:$gsonVersion",
+            recycle: "androidx.recyclerview:recyclerview:$recycleVersion",
+            constrainlayout: "androidx.constraintlayout:constraintlayout:$constrainlayoutVersion"
+    ]
+
+    ext.proceesors = [
+            proglide: "com.github.bumptech.glide:compiler:$glideVersion"
+    ]
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
